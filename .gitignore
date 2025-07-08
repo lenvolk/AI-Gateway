@@ -206,3 +206,4 @@ labs/ai-foundry-sdk/params.json
 # Ignore local environment files
 .env
 .env.local
+logs/.*-audit.json
