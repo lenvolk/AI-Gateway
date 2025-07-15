@@ -49,7 +49,7 @@ var policyXml = loadTextContent('policy.xml')
 var updatedPolicyXml = replace(policyXml, '{backend-id}', (length(openAIConfig) > 1) ? 'openai-backend-pool' : openAIConfig[0].name)
 
 var functionAppName = 'weather'
-var deploymentStorageContainerName = 'app-package-${take(functionAppName, 32)}-${take(toLower(uniqueString(functionAppName, resourceSuffix)), 7)}'
+var deploymentStorageContainerName = 'app-package01-${take(functionAppName, 32)}-${take(toLower(uniqueString(functionAppName, resourceSuffix)), 7)}'
 var storageContainers = [{name: deploymentStorageContainerName}, {name: 'snippets'}]
 
 // ------------------
